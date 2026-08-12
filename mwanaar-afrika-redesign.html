@@ -35,7 +35,35 @@
 <style>
   :root { color-scheme: dark; }
   html { scroll-behavior: smooth; }
-  body { background: #0A0A14; }
+  body {
+    background: #0A0A14;
+    font-feature-settings: 'cv11', 'ss01', 'cv01';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-feature-settings: 'cv11', 'ss01', 'cv01';
+  }
+
+  .nav-label {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  .section-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .stat-value {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
 
   .bg-noise {
     background-image: radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
@@ -203,16 +231,16 @@
       <span class="font-display font-semibold tracking-[-0.01em] text-[17px]">Mwanaar Afrika</span>
     </a>
 
-    <nav class="hidden lg:flex items-center gap-9 text-[14.5px] text-muted font-medium">
-      <a href="#services" class="hover:text-ink transition-colors">Services</a>
-      <a href="#industries" class="hover:text-ink transition-colors">Industries</a>
-      <a href="#work" class="hover:text-ink transition-colors">Work</a>
-      <a href="#insights" class="hover:text-ink transition-colors">Insights</a>
-      <a href="#about" class="hover:text-ink transition-colors">About</a>
-      <a href="#contact" class="hover:text-ink transition-colors">Contact</a>
+    <nav class="hidden lg:flex items-center gap-9 text-muted font-medium">
+      <a href="#services" class="nav-label hover:text-ink transition-colors">Services</a>
+      <a href="#industries" class="nav-label hover:text-ink transition-colors">Industries</a>
+      <a href="#work" class="nav-label hover:text-ink transition-colors">Work</a>
+      <a href="#insights" class="nav-label hover:text-ink transition-colors">Insights</a>
+      <a href="#about" class="nav-label hover:text-ink transition-colors">About</a>
+      <a href="#contact" class="nav-label hover:text-ink transition-colors">Contact</a>
     </nav>
 
-    <a href="#contact" class="hidden lg:inline-flex items-center gap-2 btn-primary text-ink text-[14.5px] font-medium px-5 py-2.5 rounded-full">
+    <a href="#contact" class="hidden lg:inline-flex items-center gap-2 btn-primary text-ink nav-label px-5 py-2.5 rounded-full">
       Start a Project
     </a>
 
@@ -221,13 +249,13 @@
     </button>
   </div>
 
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-hairline px-6 py-5 flex flex-col gap-4 text-[15px] text-muted bg-bg">
-    <a href="#services" class="mobile-link">Services</a>
-    <a href="#industries" class="mobile-link">Industries</a>
-    <a href="#work" class="mobile-link">Work</a>
-    <a href="#insights" class="mobile-link">Insights</a>
-    <a href="#about" class="mobile-link">About</a>
-    <a href="#contact" class="mobile-link">Contact</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-hairline px-6 py-5 flex flex-col gap-4 text-muted bg-bg">
+    <a href="#services" class="mobile-link nav-label">Services</a>
+    <a href="#industries" class="mobile-link nav-label">Industries</a>
+    <a href="#work" class="mobile-link nav-label">Work</a>
+    <a href="#insights" class="mobile-link nav-label">Insights</a>
+    <a href="#about" class="mobile-link nav-label">About</a>
+    <a href="#contact" class="mobile-link nav-label">Contact</a>
     <a href="#contact" class="btn-primary text-ink text-center font-medium px-5 py-2.5 rounded-full mt-1">Start a Project</a>
   </div>
 </header>
@@ -239,7 +267,7 @@
   <div class="glow-orb w-[320px] h-[320px] bg-violet-400/10 top-60 -left-32"></div>
   <div class="max-w-7xl mx-auto px-6 lg:px-10 relative grid lg:grid-cols-[1.05fr_0.95fr] gap-16 items-center">
     <div class="reveal">
-      <span class="inline-flex items-center gap-2 text-[13px] font-medium bg-gradient-to-r from-indigo-500/15 to-violet-400/15 text-violet-300 border border-indigo-400/25 rounded-full px-3.5 py-1.5 mb-7">
+      <span class="inline-flex items-center gap-2 section-tag bg-gradient-to-r from-indigo-500/15 to-violet-400/15 text-violet-300 border border-indigo-400/25 rounded-full px-3.5 py-1.5 mb-7">
         <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-400 to-violet-400"></span>
         Data & Digital Studio
       </span>
@@ -299,15 +327,15 @@
           <div class="grid grid-cols-3 gap-3">
             <div class="rounded-xl border border-white/10 bg-black/30 backdrop-blur-md px-3.5 py-3">
               <p class="text-[11px] text-muted">Datasets cleaned</p>
-              <p class="font-display text-lg font-semibold mt-1 text-ink" data-count="128">0</p>
+              <p class="font-display text-lg font-semibold mt-1 text-ink stat-value" data-count="128">0</p>
             </div>
             <div class="rounded-xl border border-white/10 bg-black/30 backdrop-blur-md px-3.5 py-3">
               <p class="text-[11px] text-muted">Active systems</p>
-              <p class="font-display text-lg font-semibold mt-1 text-ink" data-count="34">0</p>
+              <p class="font-display text-lg font-semibold mt-1 text-ink stat-value" data-count="34">0</p>
             </div>
             <div class="rounded-xl border border-white/10 bg-black/30 backdrop-blur-md px-3.5 py-3">
               <p class="text-[11px] text-muted">Uptime</p>
-              <p class="font-display text-lg font-semibold mt-1 text-ink" data-count="99" data-suffix="%">0</p>
+              <p class="font-display text-lg font-semibold mt-1 text-ink stat-value" data-count="99" data-suffix="%">0</p>
             </div>
           </div>
         </div>
@@ -317,7 +345,7 @@
 
   <!-- trusted by -->
   <div class="max-w-7xl mx-auto px-6 lg:px-10 mt-20 reveal">
-    <p class="text-[12.5px] uppercase tracking-[0.14em] text-muted mb-6">Selected partners across Zimbabwe</p>
+    <p class="section-tag text-muted mb-6">Selected partners across Zimbabwe</p>
     <div class="flex flex-wrap items-center gap-x-12 gap-y-4 text-[15px] font-display font-medium text-muted/80">
       <span>NACOD</span>
       <span>Living Word Ministries Zimbabwe</span>
@@ -330,7 +358,7 @@
 <section id="services" class="py-24 lg:py-32 border-t border-hairline">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="max-w-2xl reveal">
-      <p class="text-[13px] font-medium text-primary mb-3">What we do</p>
+      <p class="section-tag text-primary mb-3">What we do</p>
       <h2 class="font-display font-semibold text-[30px] sm:text-[36px] tracking-[-0.01em] leading-[1.15]">Six disciplines. One studio.</h2>
       <p class="mt-4 text-muted text-[16px] leading-[1.7]">Most agencies hand data work to one team and product work to another. We keep them under one roof, so the dashboard you get actually matches the system it's reporting on.</p>
     </div>
@@ -410,7 +438,7 @@
 <section class="py-24 lg:py-28 border-t border-hairline bg-surface/40">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="max-w-2xl reveal">
-      <p class="text-[13px] font-medium text-primary mb-3">Why Mwanaar</p>
+      <p class="section-tag text-primary mb-3">Why Mwanaar</p>
       <h2 class="font-display font-semibold text-[30px] sm:text-[36px] tracking-[-0.01em] leading-[1.15]">Built for organisations that can't afford to guess.</h2>
     </div>
 
@@ -477,7 +505,7 @@
 <section class="py-24 lg:py-32 border-t border-hairline">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="max-w-2xl reveal">
-      <p class="text-[13px] font-medium text-primary mb-3">How we work</p>
+      <p class="section-tag text-primary mb-3">How we work</p>
       <h2 class="font-display font-semibold text-[30px] sm:text-[36px] tracking-[-0.01em] leading-[1.15]">From raw records to a running product.</h2>
       <p class="mt-4 text-muted text-[16px] leading-[1.7]">This is the order data actually moves through on a real engagement — each stage feeds the next.</p>
     </div>
@@ -524,7 +552,7 @@
 <section id="work" class="py-24 lg:py-32 border-t border-hairline bg-surface/40">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="max-w-2xl reveal">
-      <p class="text-[13px] font-medium text-primary mb-3">Our work</p>
+      <p class="section-tag text-primary mb-3">Our work</p>
       <h2 class="font-display font-semibold text-[30px] sm:text-[36px] tracking-[-0.01em] leading-[1.15]">Websites and systems we've shipped.</h2>
       <p class="mt-4 text-muted text-[16px] leading-[1.7]">Real projects, live today — plus a look at the kind of dashboards and systems we build once your data is clean.</p>
     </div>
@@ -575,7 +603,7 @@
 <section id="industries" class="py-24 lg:py-32 border-t border-hairline">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="max-w-2xl reveal">
-      <p class="text-[13px] font-medium text-primary mb-3">Who we work with</p>
+      <p class="section-tag text-primary mb-3">Who we work with</p>
       <h2 class="font-display font-semibold text-[30px] sm:text-[36px] tracking-[-0.01em] leading-[1.15]">Industries we serve.</h2>
     </div>
 
@@ -632,7 +660,7 @@
     </div>
 
     <div class="reveal order-1 lg:order-2">
-      <p class="text-[13px] font-medium text-primary mb-3">Who we are</p>
+      <p class="section-tag text-primary mb-3">Who we are</p>
       <h2 class="font-display font-semibold text-[30px] sm:text-[36px] tracking-[-0.01em] leading-[1.15]">About Mwanaar Afrika</h2>
       <p class="mt-5 text-muted text-[15.5px] leading-[1.75]">
         We're a digital technology firm transforming raw data into actionable intelligence, and physical spaces into smart, secure environments — for businesses, NGOs and government institutions across Africa.
@@ -640,26 +668,26 @@
 
       <div class="mt-8 grid gap-5">
         <div class="rounded-[16px] border border-hairline bg-card p-5">
-          <p class="text-[12px] font-medium text-primary uppercase tracking-wide mb-1.5">Mission</p>
+          <p class="section-tag text-primary mb-1.5">Mission</p>
           <p class="text-[14.5px] text-muted leading-[1.7]">To democratise data literacy and digital excellence across Africa, turning information into strategy and spaces into secure environments.</p>
         </div>
         <div class="rounded-[16px] border border-hairline bg-card p-5">
-          <p class="text-[12px] font-medium text-primary uppercase tracking-wide mb-1.5">Vision</p>
+          <p class="section-tag text-primary mb-1.5">Vision</p>
           <p class="text-[14.5px] text-muted leading-[1.7]">To be Africa's leading partner in data, digital and security solutions.</p>
         </div>
       </div>
 
       <div class="grid grid-cols-3 gap-6 mt-10 pt-8 border-t border-hairline">
         <div>
-          <p class="font-display text-[28px] font-semibold" data-count="6">0</p>
+          <p class="font-display text-[28px] font-semibold stat-value" data-count="6">0</p>
           <p class="text-[12.5px] text-muted mt-1">core disciplines</p>
         </div>
         <div>
-          <p class="font-display text-[28px] font-semibold" data-count="100" data-suffix="%">0</p>
+          <p class="font-display text-[28px] font-semibold stat-value" data-count="100" data-suffix="%">0</p>
           <p class="text-[12.5px] text-muted mt-1">Africa-based delivery</p>
         </div>
         <div>
-          <p class="font-display text-[28px] font-semibold">&lt;72h</p>
+          <p class="font-display text-[28px] font-semibold stat-value">&lt;72h</p>
           <p class="text-[12.5px] text-muted mt-1">typical first response</p>
         </div>
       </div>
@@ -671,7 +699,7 @@
 <section id="insights" class="py-24 lg:py-28 border-t border-hairline">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="max-w-2xl reveal">
-      <p class="text-[13px] font-medium text-primary mb-3">Insights</p>
+      <p class="section-tag text-primary mb-3">Insights</p>
       <h2 class="font-display font-semibold text-[28px] sm:text-[32px] tracking-[-0.01em] leading-[1.15]">Research and writing — coming soon.</h2>
       <p class="mt-4 text-muted text-[15.5px] leading-[1.7]">We're building out a home for the case studies, whitepapers and field notes behind our engagements. Get in touch if you'd like to be first to read one.</p>
     </div>
@@ -701,7 +729,7 @@
 <section id="contact" class="py-24 lg:py-32 border-t border-hairline bg-surface/40">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[1fr_0.8fr] gap-16">
     <div class="reveal">
-      <p class="text-[13px] font-medium text-primary mb-3">Get in touch</p>
+      <p class="section-tag text-primary mb-3">Get in touch</p>
       <h2 class="font-display font-semibold text-[28px] sm:text-[34px] tracking-[-0.01em] leading-[1.15]">Tell us what your data looks like right now.</h2>
       <p class="mt-4 text-muted text-[15.5px] leading-[1.7] max-w-md">Fill in the form and we'll reply within two working days, or reach us directly using the details alongside.</p>
 
@@ -749,7 +777,7 @@
 
     <div class="reveal" style="transition-delay:.1s">
       <div class="rounded-[20px] border border-hairline bg-card p-8">
-        <p class="text-[13px] font-medium text-primary mb-6">Direct contact</p>
+        <p class="section-tag text-primary mb-6">Direct contact</p>
         <div class="grid gap-5">
           <div class="flex items-start gap-3.5">
             <div class="w-9 h-9 shrink-0 rounded-lg bg-gradient-to-br from-indigo-500/15 to-violet-400/10 border border-indigo-400/20 flex items-center justify-center">
@@ -800,7 +828,7 @@
       <p class="mt-4 text-muted text-[14px] leading-[1.7] max-w-[280px]">A data and digital studio building clarity and software for organisations across the continent.</p>
     </div>
     <div>
-      <p class="text-[12px] uppercase tracking-wide text-muted mb-4">Studio</p>
+      <p class="section-tag text-muted mb-4">Studio</p>
       <div class="flex flex-col gap-3 text-[14px] text-muted">
         <a href="#about" class="hover:text-ink transition-colors">About</a>
         <a href="#services" class="hover:text-ink transition-colors">Services</a>
@@ -809,7 +837,7 @@
       </div>
     </div>
     <div>
-      <p class="text-[12px] uppercase tracking-wide text-muted mb-4">Contact</p>
+      <p class="section-tag text-muted mb-4">Contact</p>
       <div class="flex flex-col gap-3 text-[14px] text-muted">
         <a href="mailto:mwanaarafrika@gmail.com" class="hover:text-ink transition-colors">mwanaarafrika@gmail.com</a>
         <a href="tel:+263776463437" class="hover:text-ink transition-colors">Mufaro — +263 77 646 3437</a>
